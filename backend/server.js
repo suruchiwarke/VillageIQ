@@ -544,8 +544,8 @@ app.delete("/v1/apikeys/:id", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
-
+const PORT = process.env.PORT || 3000;
 // Server start
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 3000");
 });

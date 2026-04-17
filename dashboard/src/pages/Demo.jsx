@@ -5,7 +5,7 @@ const Demo = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const API = import.meta.env.VITE_API_URL;
   const handleSearch = async (value) => {
     setQuery(value);
 
@@ -18,13 +18,13 @@ const Demo = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/v1/autocomplete?q=${value}`,
-        {
-          headers: {
-            "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
-          },
-        }
-      );
+  `${API}/autocomplete?q=${value}`,
+  {
+    headers: {
+      "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
+    },
+  }
+);
 
       const data = await res.json();
 

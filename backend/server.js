@@ -5,6 +5,10 @@ const crypto = require("crypto");
 const bcrypt = require("bcrypt");
 const rateLimit = require("express-rate-limit");
 
+
+app.use(cors({
+  origin: "*"
+}));
 const app = express();
 app.use(cors());
 app.use(express.json());

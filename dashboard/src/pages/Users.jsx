@@ -5,13 +5,14 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-  fetch(`${API}/v1/users`, {
+  fetch(`${API}/users`, {
     headers: {
       "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
     },
   })
     .then((res) => res.json())
     .then((res) => {
+      console.log("API RESPONSE:", res);
       if (res.success && Array.isArray(res.data)) {
         setUsers(res.data);
       } else {

@@ -18,7 +18,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    fetch(`${API}/v1/analytics`, {
+    fetch(`${API}/analytics`, {
       headers: {
         "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
       },

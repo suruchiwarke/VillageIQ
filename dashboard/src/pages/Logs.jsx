@@ -4,7 +4,11 @@ const Logs = () => {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${API}/admin/logs`)
+    fetch(`${API}/logs`, {
+  headers: {
+    "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
+  },
+})
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

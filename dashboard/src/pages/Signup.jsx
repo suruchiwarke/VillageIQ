@@ -4,7 +4,7 @@ const Signup = ({ onUserAdded }) => {
   const [email, setEmail] = useState("");
 
   const handleSignup = () => {
-    fetch("http://localhost:3000/signup", {
+    fetch("https://villageiq.onrender.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

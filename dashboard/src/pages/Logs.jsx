@@ -4,11 +4,7 @@ const Logs = () => {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${API}/admin/logs`, {
-  headers: {
-    "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
-  },
-})
+    fetch("https://villageiq.onrender.com/admin/logs")
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

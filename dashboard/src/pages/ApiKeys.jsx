@@ -26,7 +26,7 @@ const ApiKeys = () => {
 
   // ✅ Generate new key
   const generateKey = () => {
-    fetch("http://localhost:3000/generate-key")
+    fetch("https://villageiq.onrender.com/generate-key")
       .then((res) => res.json())
       .then((data) => {
         alert(
@@ -43,7 +43,7 @@ const ApiKeys = () => {
 
   // ✅ Delete key
   const deleteKey = (id) => {
-    fetch(`http://localhost:3000/v1/apikeys/${id}`, {
+    fetch(`${API}/apikeys/${id}`, {
       method: "DELETE",
       headers: {
         "x-api-key": "ak_511736bdf1c085191975f0985d90104f",

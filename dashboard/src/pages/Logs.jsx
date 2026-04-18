@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-
+const API = import.meta.env.VITE_API_URL;
 const Logs = () => {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/admin/logs")
+    fetch(`${API}/admin/logs`)
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

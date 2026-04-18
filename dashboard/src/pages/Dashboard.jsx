@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const API = import.meta.env.VITE_API_URL;
 import {
   LineChart,
   Line,
@@ -17,7 +18,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/v1/analytics", {
+    fetch(`${API}/v1/analytics`, {
       headers: {
         "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
       },

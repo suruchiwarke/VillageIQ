@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+const API = import.meta.env.VITE_API_URL;
 import Signup from "./Signup";
 const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-  fetch("http://localhost:3000/v1/users", {
+  fetch(`${API}/v1/users`, {
     headers: {
       "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
     },

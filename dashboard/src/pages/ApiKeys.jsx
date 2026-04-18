@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-
+const API = import.meta.env.VITE_API_URL;
 const ApiKeys = () => {
   const [keys, setKeys] = useState([]);
 
   // ✅ Fetch keys
   const fetchKeys = () => {
-    fetch("http://localhost:3000/v1/apikeys", {
+    fetch(`${API}/apikeys`, {
       headers: {
         "x-api-key": "ak_511736bdf1c085191975f0985d90104f",
       },
